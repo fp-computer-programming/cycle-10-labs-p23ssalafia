@@ -1,14 +1,9 @@
-#Author: Sean Salafia 1/20/23
-
-
 sum = 0
 
-user_input =("Input number here: ")
-int(user_input)
+while True:
+    num = int(input("Input a number here: " ))
+    if num == -1:
+        print(sum)
+        break
+    sum += num
 
-if user_input == -1:
-    print (sum)
-
-while user_input != -1:
-    sum += user_input
-    break
