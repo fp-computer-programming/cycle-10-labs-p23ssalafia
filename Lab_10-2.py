@@ -1,13 +1,14 @@
 #Author: Sean Salafia 1/23/23
-input = input("Input number here: ")
-input = int(input)
-n = 0
+n = []
 
-while n < 5:
-    if input % 3 == 0:
-        list.append(input)
+while True:
+    input_number = int(input("Input number here: "))
+    if input_number == -1:
+        break
+    elif input_number % 3 == 0:
+        n.append(input_number)
     else:
         continue
-print(input)
 
+print("Multiples of 3: ", n)
 
