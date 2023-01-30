@@ -9,4 +9,4 @@ while True:           #While the number is -1, print sum, otherwise, do the equa
         break
     sum += num
 
-#DONE
+#DONE 

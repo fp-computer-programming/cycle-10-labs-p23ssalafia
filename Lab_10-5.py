@@ -1,26 +1,23 @@
-#Author: Sean Salafia 1/25/23
+#Author: Sean Salafia    
 
-
-def add_foods(food):
-    six_letter_foods = []
+def add_foods(foods):
+    sixth_letter = []       #Creates a bunch of lists to be appended
     not_foods = []
     short_foods = []
-    for index,variables in enumerate(food):
+    for food in foods:
         try:
-            food_string = str(variables)
-            if len(food_string) >= 8:
-                six_letter_foods.append(food_string)
-            else:
-                short_foods.append(food_string)
-        except TypeError:
-            not_foods.append(food_string)
-        except IndexError:
-            short_foods.append(food_string)
+            if len(food) >= 6:                  #If length of input is more than 6, add the 6th letter to a list sixth letter
+                sixth_letter.append(food[5])
+            else:                               #If length of input is less than 6 add to short foods
+                short_foods.append(food)
+        except :                                 #If any error occurs, like a type error, add the input to not foods
+            not_foods.append(food)
+            
+    return("Sixth Letter: ", sixth_letter,"Not Foods :", not_foods,"Short Foods: ", short_foods)        #return
 
-    return("Six Letter Foods: ", six_letter_foods,"Not Foods :", not_foods,"Short Foods: ", short_foods)
-
-print(add_foods(['potoatoes','salsa','cherries','banana','apple']))
+#Test Cases
+print(add_foods(['potatoes','salsa','cherries','banana','apple']))
 print(add_foods(['naan','celery','buckwheat',7,'clementine']))
 print(add_foods(['cheeseburger',True,'chicken','rice','radish']))
 
-#WIP
+#DONE 
